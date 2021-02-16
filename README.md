@@ -1,2 +1,5 @@
-# breakage
-跨平台文献翻译工具（知云给了我“我上我也行”的感觉）
+# Breakage
+
+基于Electron的跨平台文献翻译工具
+
+（WIP）

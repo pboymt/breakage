@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  justify-content: center;
+  overflow: auto;
+  div.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 14px;
+    min-width: 19rem;
+    max-width: 40rem;
+  }
+}

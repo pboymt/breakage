@@ -1,0 +1,13 @@
+<div class="label" *ngIf="role !== 'divider'">{{ label | translate }}</div>
+<div class="accel" *ngIf="role === 'button' && accel">{{ accel }}</div>
+<div class="submenu" codicon="chevron-right" *ngIf="role === 'menu'"></div>
+<app-menu-list *ngIf="role === 'menu'">
+  <ng-container *ngFor="let item of submenu">
+    <app-menu-item *ngIf="item.role === 'button'" [role]="item.role" [label]="item.label" [accel]="item.accel" [symbol]="item.symbol">
+    </app-menu-item>
+    <app-menu-item *ngIf="item.role === 'menu'" [role]="item.role" [label]="item.label" [list]="item.submenu">
+    </app-menu-item>
+    <app-menu-item *ngIf="item.role === 'divider'" [role]="item.role"></app-menu-item>
+  </ng-container>
+</app-menu-list>
+<div *ngIf="role === 'divider'"></div>

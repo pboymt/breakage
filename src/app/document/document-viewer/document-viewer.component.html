@@ -1,0 +1,47 @@
+<!-- <p>document-viewer {{docname}} works!</p>
+<p>{{time}}</p> -->
+<div class="toolbar">
+  <div class="item button" codicon="arrow-up" [class.disable]="page === 1" (click)="pagePrev()"></div>
+  <div class="item button" codicon="arrow-down" [class.disable]="pageNo === pageCount" (click)="pageNext()"></div>
+  <div class="item input">
+    <input type="tel" #pageNumber [value]="page" (keydown.enter)="pageTo(pageNumber.value)"
+      style="width: 1.5rem; text-align: right;">
+    <div class="total-no">/ {{ pageCount }}</div>
+  </div>
+  <div class="fill"></div>
+  <div class="item button"><i codicon="remove"></i></div>
+  <div class="item button"><i codicon="add"></i></div>
+  <div class="item button" (click)="rotate()" style="transform: rotate(180deg);">
+    <i codicon="refresh"></i>
+  </div>
+  <ng-container [ngSwitch]="zoomScale">
+    <div class="item button" *ngSwitchCase="'page-width'" (click)=" zoomScaleChange()">
+      <i codicon="arrow-both"></i>
+    </div>
+    <div class=" item button" style="transform: rotate(90deg);" *ngSwitchCase="'page-height'"
+      (click)="zoomScaleChange()">
+      <i codicon="arrow-both"></i>
+    </div>
+    <div class="item button" *ngSwitchCase="'page-fit'" (click)="zoomScaleChange()">
+      <i codicon="move"></i>
+    </div>
+  </ng-container>
+
+  <!-- <div class="item input">
+    <select>
+      <option value="100%">100%</option>
+    </select>
+  </div> -->
+  <div class="fill"></div>
+  <div class="item input">
+    <input type="text">
+  </div>
+  <div class="item button" codicon="search"></div>
+</div>
+<pdf-viewer [src]="pdfSrc" [render-text]="true" [render-text-mode]="2" external-link-target="blank" [show-all]="true"
+  [page]="page" [rotation]="rotation" [stick-to-page]="true" [zoom-scale]="zoomScale" external-link-target="blank"
+  [original-size]="false" [autoresize]="true" (after-load-complete)="loadCompleted($event)" (mouseup)="selectedText()"
+  (page-rendered)="onPageRendered()" (pageChange)="onPageChange($event)" (pages-initialized)="onPageInitialized()"
+  style="display: block; flex: 1; overflow: auto;">
+</pdf-viewer>
+<!-- <ngx-extended-pdf-viewer height="100%" style="display:block;flex:1 0 auto" [src]="pdfSrc"></ngx-extended-pdf-viewer> -->

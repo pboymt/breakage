@@ -1,0 +1,7 @@
+<!-- <div class="tab-fix"></div> -->
+<div class="tab home" [routerLink]="['/home']" routerLinkActive="router-link-active"><div class="title">首页</div></div>
+<div class="tab" *ngFor="let item of order; let i = index" [routerLink]="item.route_path"
+    routerLinkActive="router-link-active" [title]="item.title">
+    <div class="title">{{item.title}}</div>
+    <div class="closable" codicon="close" (click)="tabsManager.closeTab(item.id)"></div>
+</div>

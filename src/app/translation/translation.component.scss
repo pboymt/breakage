@@ -1,0 +1,99 @@
+@mixin translation-container-title {
+    line-height: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    user-select: none;
+}
+
+:host {
+    display: flex;
+    z-index: 999;
+    div.translation-window {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        width: 30rem;
+        min-width: 20rem;
+        max-width: 70vw;
+        background-color: #fff;
+        div.resizebar {
+            position: absolute;
+            height: 100%;
+            cursor: col-resize;
+            width: 5px;
+            background-color: #eee;
+            &:hover {
+                background-color: #ccc;
+            }
+        }
+        div.welcome {
+            display: block;
+            flex-grow: 1;
+            padding: 0.5rem;
+            line-height: 2rem;
+            font-size: 1.5rem;
+        }
+        div.translation {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin-left: 5px;
+            padding: 0 0.5rem;
+            div.original-content-container {
+                display: flex;
+                flex-direction: column;
+                flex: none;
+                div.title {
+                    @include translation-container-title();
+                }
+                textarea {
+                    display: block;
+                    white-space: normal;
+                    height: 10rem;
+                    line-height: 1.1rem;
+                    font-size: 1rem;
+                    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                    resize: none;
+                    border: #eee 1px solid;
+                    &:focus,
+                    &:hover {
+                        border-color: #ccc;
+                    }
+                }
+            }
+            div.controller {
+                display: flex;
+                height: 48px;
+                align-items: center;
+                flex-direction: row-reverse;
+                div.button {
+                    max-width: 0 0.2rem;
+                    display: block;
+                    user-select: none;
+                    cursor: pointer;
+                    flex: none;
+                    height: 32px;
+                    line-height: 32px;
+                    padding: 0 0.5rem;
+                    background-color: #ddd;
+                    &:hover {
+                        background-color: #eee;
+                    }
+                }
+            }
+            div.translation-result-container {
+                display: flex;
+                flex-direction: column;
+                flex: none;
+                div.title {
+                    @include translation-container-title();
+                }
+                pre.result {
+                    display: block;
+                    line-height: 1rem;
+                }
+            }
+        }
+    }
+}

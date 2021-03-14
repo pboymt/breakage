@@ -1,0 +1,12 @@
+<div class="title">{{ title }}</div>
+<ng-container *ngIf="items">
+  <ng-container *ngFor="let item of items">
+    <app-pref-item-string-input *ngIf="item.type === 'string' && item.input === 'textbox'" [option]="item">
+    </app-pref-item-string-input>
+  </ng-container>
+</ng-container>
+<ng-container *ngIf="groups">
+  <ng-container *ngFor="let item of groups">
+    <app-pref-group [title]="item.title" [groups]="item.groups" [items]="item.items"></app-pref-group>
+  </ng-container>
+</ng-container>

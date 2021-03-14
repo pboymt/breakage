@@ -1,0 +1,58 @@
+:host {
+  display: flex;
+  height: 30px;
+  flex-shrink: 0;
+  color: #333333;
+  background-color: rgb(221, 221, 221);
+  color: rgb(51, 51, 51);
+  -webkit-app-region: drag;
+  user-select: none;
+  &.blur {
+    background-color: rgb(229, 229, 229);
+    color: rgba(51, 51, 51, 0.6);
+  }
+  div.app-icon {
+    display: block;
+    width: 30px;
+    line-height: 30px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  div.menu-bar {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    -webkit-app-region: no-drag;
+  }
+  div.title {
+    display: block;
+    line-height: 30px;
+    font-size: 12px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-align: center;
+  }
+  div.window-control {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    -webkit-app-region: no-drag;
+    div.window-icon {
+      display: block;
+      flex: none;
+      width: 46px;
+      font-size: 16px;
+      line-height: 30px;
+      align-items: center;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      &.window-close {
+        &:hover {
+          background-color: rgba(232, 17, 35, 0.9);
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+}

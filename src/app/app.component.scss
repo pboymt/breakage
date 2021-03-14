@@ -1,0 +1,27 @@
+:host {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    // .document-window {
+    //     display: flex;
+    //     flex-direction: column;
+    //     flex-grow: 1;
+    //     .document-tab {
+    //         display: flex;
+    //         flex-grow: none;
+    //         height: 2rem;
+    //     }
+    //     .document-viewer{
+    //         display: flex;
+    //         flex-grow: 1;
+    //         align-items: stretch;
+    //         justify-content: stretch;
+    //     }
+    // }
+    div.app-window {
+        display: flex;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+}

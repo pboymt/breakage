@@ -1,0 +1,11 @@
+<div class="app-icon"></div>
+<app-menu-bar [list]="menubuttons"></app-menu-bar>
+<!-- <div class="menu-bar">
+  <app-menu-button [name]=" 'MENU.FILE._' | translate "></app-menu-button>
+</div> -->
+<div class="title">Breakage</div>
+<div class="window-control">
+  <div codicon="chrome-minimize" class="window-icon" (click)="win_minimize()"> </div>
+  <div *ngIf="show_mr_button | async" [codicon]="maximize_status | async" class="window-icon" (click)="win_max_or_re()"> </div>
+  <div codicon="chrome-close" class="window-icon window-close" (click)="win_close()"> </div>
+</div>

@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  div.title {
+    padding: 10px 10px 10px 15px;
+    line-height: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}

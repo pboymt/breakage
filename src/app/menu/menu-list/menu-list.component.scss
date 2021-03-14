@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  min-width: 16rem;
+  padding: 0.5rem 0;
+  background-color: rgb(243, 243, 243);
+  box-shadow: rgba(0, 0, 0, 0.36) 0px 2px 4px;
+  z-index: 9999;
+}

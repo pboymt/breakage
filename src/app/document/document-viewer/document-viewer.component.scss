@@ -1,0 +1,74 @@
+:host {
+    position: relative;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    padding-top: 32px;
+    background-color: #f3f3f3;
+    div.toolbar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        display: flex;
+        height: 30px;
+        background-color: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.36) 0px 2px 2px 0px;
+        z-index: 99;
+        user-select: none;
+        div.fill {
+            flex-grow: 1;
+        }
+        div.item {
+            flex: none;
+            line-height: 30px;
+            min-width: 30px;
+            &.button {
+                display: flex;
+                width: 30px;
+                height: 30px;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.1);
+                    // color: #f3f3f3;
+                }
+                &.disable {
+                    background-color: transparent;
+                    opacity: 0.3;
+                }
+            }
+            &.input {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                input {
+                    display: block;
+                    flex: none;
+                    height: 20px;
+                    line-height: 20px;
+                    border: 1px solid #f1f1f1;
+                    // text-align: right;
+                    &:hover,
+                    &:focus {
+                        border-color: rgba(56, 56, 56, 0.3);
+                    }
+                }
+                div.total-no {
+                    padding: 0 0.5rem;
+                    line-height: 30px;
+                    font-size: 14px;
+                }
+                select {
+                    height: 25px;
+                    line-height: 25px;
+                    border: 1px solid #f1f1f1;
+                    &:hover,
+                    &:focus {
+                        border-color: rgba(56, 56, 56, 0.6);
+                    }
+                }
+            }
+        }
+    }
+}

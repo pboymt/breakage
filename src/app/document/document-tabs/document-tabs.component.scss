@@ -1,0 +1,84 @@
+:host {
+    height: 2rem;
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    flex-shrink: 0;
+    overflow-y: hidden;
+    align-items: flex-end;
+    // padding: 0 0.5rem;
+
+    &::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+    }
+
+    div.tab-fix {
+        position: absolute;
+        flex-shrink: 0;
+        flex-grow: 0;
+        height: 2rem;
+        width: 0.2rem;
+        background-color: #ddd;
+        border-top: 1px solid #aaa;
+        border-left: 1px solid #aaa;
+        border-radius: 0.2rem 0 0 0;
+        z-index: 99;
+    }
+
+    div.tab {
+        display: flex;
+        cursor: pointer;
+        user-select: none;
+        flex-basis: auto;
+        flex-shrink: 0;
+        flex-grow: 0;
+        height: 2rem;
+        line-height: 2rem;
+        box-sizing: border-box;
+        margin-left: -0.2rem;
+        max-width: 15rem;
+        overflow: hidden;
+        background-color: rgb(236, 236, 236);
+        // border-left: 1px solid #aaa;
+        // border-top: 1px solid #aaa;
+        border-right: 1px solid #fff;
+
+        div.title {
+            padding-left: 0.7rem;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            flex-grow: 1;
+        }
+        &.home {
+            div.title {
+                padding: 0 0.7rem;
+            }
+        }
+        div.closable {
+            // display: flex;
+            width: 2rem;
+            line-height: 2rem;
+            // justify-content: center;
+            // align-items: center;
+            flex-grow: 0;
+            flex-shrink: 0;
+            visibility: hidden;
+        }
+        // &:last-of-type {
+        //     border-right: none;
+        // }
+        &:hover {
+            background-color: #eee;
+            div.closable {
+                visibility: visible;
+            }
+        }
+        &.router-link-active {
+            background-color: #fff;
+            div.closable {
+                visibility: visible;
+            }
+        }
+    }
+}

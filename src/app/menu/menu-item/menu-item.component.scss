@@ -1,0 +1,54 @@
+:host {
+  position: relative;
+  display: flex;
+  font-size: 13px;
+  height: 25px;
+  line-height: 25px;
+  app-menu-list {
+    top: 0;
+    left: 100%;
+    display: none;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-property: opacity;
+    transition-delay: 1.5s;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    app-menu-list {
+      display: flex;
+      opacity: 1;
+    }
+  }
+  div.label {
+    flex-grow: 1;
+    line-height: 25px;
+    padding-left: 25px;
+    &:last-child {
+      padding-right: 25px;
+    }
+  }
+  div.accel {
+    flex: 0 0 auto;
+    line-height: 25px;
+    padding-right: 25px;
+  }
+  div.submenu {
+    width: 25px;
+    flex: 0 0 auto;
+    line-height: 25px;
+  }
+  &.divider {
+    align-items: center;
+    height: 9px;
+    padding: 0 5px;
+    div {
+      height: 1px;
+      border-bottom: 1px dotted rgba(51, 51, 51, 0.5);
+      flex-grow: 1;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

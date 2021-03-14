@@ -1,0 +1,14 @@
+<div class="title">
+  {{ option.title }}
+</div>
+<p>
+  {{ option.description }}
+</p>
+<div class="input-controller">
+  <div class="input">
+    <!-- <input type="number"> -->
+    <input #inputText autocorrect="off" autocapitalize="off" spellcheck="false" type="text" wrap="off" [value]="value">
+    <!-- style="background-color: inherit; color: rgb(204, 204, 204);" data-focusable="true" -->
+    <div [@tipHideShow]="show ? 'show' : 'hide'" class="tip" codicon="check"></div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+{
+  "PAGES": {
+    "HOME": {
+      "TITLE": "App works !",
+      "GO_TO_DETAIL": "Go to Detail"
+    },
+    "DETAIL": {
+      "TITLE": "Detail page !",
+      "BACK_TO_HOME": "Back to Home"
+    }
+  },
+  "MENU": {
+    "FILE": {
+      "_": "File",
+      "OPEN_": "Open...",
+      "CLOSE": "Close"
+    },
+    "VIEW": {
+      "_": "View",
+      "RELOAD": "Reload",
+      "FORCERELOAD": "Force Reload",
+      "TOGGLEDEVTOOLS": "Toggle DevTools",
+      "RESETZOOM": "Reset Zoom",
+      "ZOOMIN": "Zoom In",
+      "ZOOMOUT": "Zoom Out",
+      "TOGGLEFULLSCREEN": "Toggle Full Screen"
+    },
+    "WINDOW": {
+      "_": "Window",
+      "MINIMIZE": "Minimize",
+      "ZOOM": "Zoom"
+    }
+  },
+  "DIALOG": {
+    "OPENFILE": "Choose File..."
+  }
+}

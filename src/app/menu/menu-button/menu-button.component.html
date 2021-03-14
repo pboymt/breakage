@@ -1,0 +1,12 @@
+<div class="menu-button" [class.activated]="option.activated" (click)="onClick($event)">
+  {{ option.title | translate }}<ng-container *ngIf="option.accel">({{option.accel}})</ng-container>
+</div>
+<app-menu-list *ngIf="option.activated">
+  <ng-container *ngFor="let item of option.list">
+    <app-menu-item *ngIf="item.role === 'button'" [role]="item.role" [label]="item.label" [accel]="item.accel" [symbol]="item.symbol">
+    </app-menu-item>
+    <app-menu-item *ngIf="item.role === 'menu'" [role]="item.role" [label]="item.label" [list]="item.submenu">
+    </app-menu-item>
+    <app-menu-item *ngIf="item.role === 'divider'" [role]="item.role"></app-menu-item>
+  </ng-container>
+</app-menu-list>

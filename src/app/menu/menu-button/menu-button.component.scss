@@ -1,0 +1,17 @@
+:host {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  height: 30px;
+  div.menu-button {
+    line-height: 30px;
+    font-size: 13px;
+    padding: 0 8px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    &.activated {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-grow: 1;
+  padding: 2rem;
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    .histories {
+      h3 {
+        user-select: none;
+      }
+      a {
+        user-select: none;
+        cursor: pointer;
+        display: block;
+        line-height: 1.5rem;
+        &.history {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

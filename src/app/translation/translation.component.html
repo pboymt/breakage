@@ -1,0 +1,26 @@
+<div #resize class="translation-window" mwlResizable [enableGhostResize]="true" (resizeEnd)="onResizeEnd($event)">
+    <div #resize class="resizebar" mwlResizeHandle [resizeEdges]="{ left: true }"> </div>
+    <div class="translation" *ngIf="showTranslation;else welcome">
+        <div class="original-content-container">
+            <div class="title">
+                原文
+            </div>
+            <textarea [value]="originalText"></textarea>
+        </div>
+        <div class="controller">
+            <div class="button">翻译</div>
+        </div>
+        <div class="translation-result-container">
+            <div class="title">
+                翻译
+            </div>
+            <div class="result">{{ resultText }}</div>
+        </div>
+    </div>
+</div>
+
+<ng-template #welcome>
+    <div class="welcome">
+        欢迎使用Breakage
+    </div>
+</ng-template>

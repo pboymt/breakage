@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="histories">
+    <h3 class="title">
+      {{ 'PAGES.HOME.RECENT_OPEN' | translate }}
+    </h3>
+    <a class="history" *ngFor="let item of histories" (click)="open_history(item)">
+      {{item.filename}}
+    </a>
+    <a class="open" (click)="open()">{{ 'MENU.FILE.OPEN_' | translate }}</a>
+    <a class="open" (click)="open_pref()">设置</a>
+  </div>
+  <!-- <a ([routerLink]="['/detail']")>{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a> -->
+</div>

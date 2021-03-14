@@ -1,0 +1,42 @@
+{
+  "PAGES": {
+    "HOME": {
+      "TITLE": "应用运行中。",
+      "GO_TO_DETAIL": "前往详情",
+      "RECENT_OPEN": "最近访问"
+    },
+    "DETAIL": {
+      "TITLE": "详情",
+      "BACK_TO_HOME": "返回主页"
+    }
+  },
+  "MENU": {
+    "FILE": {
+      "_": "文件",
+      "OPEN_": "打开...",
+      "CLOSE": "关闭",
+      "PREF": "首选项"
+    },
+    "VIEW": {
+      "_": "视图",
+      "RELOAD": "重载",
+      "FORCERELOAD": "强制重载",
+      "TOGGLEDEVTOOLS": "切换开发者工具",
+      "APPEARANCE": {
+        "_": "外观",
+        "RESETZOOM": "重置缩放",
+        "ZOOMIN": "放大",
+        "ZOOMOUT": "缩小",
+        "TOGGLEFULLSCREEN": "切换全屏"
+      }
+    },
+    "WINDOW": {
+      "_": "窗口",
+      "MINIMIZE": "最小化",
+      "ZOOM": "缩放"
+    }
+  },
+  "DIALOG": {
+    "OPENFILE": "选择文件..."
+  }
+}
